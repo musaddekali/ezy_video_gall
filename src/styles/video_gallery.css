@@ -163,7 +163,7 @@
 }
 
 .video_gall_right_top_ul a:active {
-  scale: .9;
+  scale: .95;
 }
 
 .video_gall_right_top_ul a:hover,
@@ -384,7 +384,7 @@
   .video_gall_search {
     position: absolute;
     top: 50%;
-    right: 70px;
+    right: 56px;
     transform: translateY(-50%) scaleX(0);
     transition: 0.3s;
     transform-origin: right;
