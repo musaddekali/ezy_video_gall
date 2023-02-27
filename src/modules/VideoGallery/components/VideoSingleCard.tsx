@@ -12,14 +12,7 @@ const VideoSingleCard = ({ video }: any) => {
     uploadTime,
     category,
   } = video;
-  console.log("I am from single card -> ", {
-    id,
-    title,
-    thumbnailUrl,
-    duration,
-    author,
-    description,
-  });
+
   return (
     <div className="col-xxl-3 col-xl-4 col-md-6">
       <div className="video_gall_card_item">

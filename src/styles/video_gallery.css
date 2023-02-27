@@ -55,7 +55,7 @@
 
 .video_gall_right {
   padding: 0 20px;
-  margin-top: 30px;
+  margin-top: calc(var(--video-gall-topbar-height) + 12px);
   width: 100%;
   max-width: 100%;
   overflow: hidden;
@@ -372,7 +372,6 @@
   object-fit: cover;
 }
 
-
 .video_gall_dtl_rltd_items {
   display: flex;
   flex-direction: column;
@@ -387,8 +386,8 @@
 }
 
 .video_gall_dtl_rltd_item_left {
-  flex: 1 0 45%;
-  max-width: 45%;
+  flex: 1 0 168px;
+  max-width: 168px;
 }
 
 .video_gall_dtl_rltd_item_right {

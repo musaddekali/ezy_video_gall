@@ -13,7 +13,7 @@ const VideoGallery = () => {
     videos,
   } = useHome();
   const [filterText, setFilterText] = useState("all");
-  const [filteredVideos, setFilteredVideos] = useState([]);
+  const [filteredVideos, setFilteredVideos] = useState<any>([]);
 
   const handleFilterText = (e: any, cat: any) => {
     e.preventDefault();
@@ -38,7 +38,6 @@ const VideoGallery = () => {
 
   return (
     <div className="video_gall_wrap">
-      <div className="demo_spacer my-5"></div>
       <div className="">
         <div className="video_gall d-flex justify-content-stretch">
           <Topbar

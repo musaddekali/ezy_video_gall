@@ -54,7 +54,7 @@ const VideoView = () => {
             </div>
           </div>
           <div className="col-lg-4">
-            <div className="video_gall_dtl_right">
+            <div className="video_gall_dtl_right  mt-4 mt-lg-0">
               <div className="video_gall_dtl_rltd_items_wrap">
                 <ul className="video_gall_dtl_rltd_items">
                   <li>
