@@ -353,8 +353,6 @@
 }
 
 .video_gall_dtl_vdo_frame {
-  height: 600px;
-  max-height: 100vh;
   overflow: hidden;
   border-radius: 12px;
 }

@@ -3,7 +3,7 @@ import React from "react";
 const VideoView = () => {
   return (
     <div className="video_gall_dtl_wrap">
-      <div className="container-fluid">
+      <div>
         <div className="row">
           <div className="col-lg-8">
             <div className="video_gall_dtl_left">
@@ -14,19 +14,24 @@ const VideoView = () => {
                     {/* https://iframe.mediadelivery.net/embed/29280/3ce41a1f-5ebc-4b76-ae11-3e231b7bdf72?autoplay=true" loading="lazy"  */}
                     {/* https://iframe.mediadelivery.net/embed/29280/6fba3bc0-a1ec-4310-adb6-9220c281f524?autoplay=true" loading="lazy" */}
                     {/* https://iframe.mediadelivery.net/embed/29280/99042764-6ca1-4fed-a7e2-af38e1a5c6d5?autoplay=true" loading="lazy" */}
-                    <iframe
-                      src="https://iframe.mediadelivery.net/embed/29280/40c4c336-6273-4354-a3d9-c7b3a7a1c045?autoplay=true"
-                      loading="lazy"
-                      style={{
-                        border: "none",
-                        position: "absolute",
-                        top: 0,
-                        height: "100%",
-                        width: "100%",
-                      }}
-                      allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                      allowFullScreen={true}
-                    />
+                    <div style={{ position: "relative", paddingTop: "56.25%" }}>
+                      <iframe
+                        src="https://iframe.mediadelivery.net/embed/29280/40c4c336-6273-4354-a3d9-c7b3a7a1c045?autoplay=true"
+                        loading="lazy"
+                        style={{
+                          border: "none",
+                          position: "absolute",
+                          top: 0,
+                          left: 0,
+                          right: 0,
+                          bottom: 0,
+                          height: "100%",
+                          width: "100%",
+                        }}
+                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
                   </div>
                   <div className="video_gall_dtl_vdo_title my-3">
                     <h3>Learn how to make a online video in 3 months</h3>
