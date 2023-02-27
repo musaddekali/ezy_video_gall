@@ -1,5 +1,5 @@
-import Home from "../modules/home/home.comp";
+import VideoGallery from "../modules/VideoGallery/VideoGallery.comp";
 
 export default function HomePage() {
-  return <Home />;
+  return <VideoGallery />;
 }

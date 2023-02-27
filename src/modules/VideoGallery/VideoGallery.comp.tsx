@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Sidebar from "./Sidebar";
-import Topbar from "./Topbar";
-import VideoSingleCard from "./VideoSingleCard";
+import Sidebar from "./components/Sidebar";
+import Topbar from "./components/Topbar";
+import VideoSingleCard from "./components/VideoSingleCard";
 import useHome from "./useHome";
 
-const Home = () => {
+const VideoGallery = () => {
   const {
     isVideoSidebarOpen,
     toggleVideoSidebar,
@@ -18,7 +18,6 @@ const Home = () => {
   const handleFilterText = (e: any, cat: any) => {
     e.preventDefault();
     setFilterText(cat);
-    console.log("filter id => ", cat);
   };
 
   useEffect(() => {
@@ -111,4 +110,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default VideoGallery;
