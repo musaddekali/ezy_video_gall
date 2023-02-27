@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
 import VideoSingleCard from "./VideoSingleCard";
@@ -10,9 +10,32 @@ const Home = () => {
     toggleVideoSidebar,
     isVideoSearchOpen,
     toggleVideoSearch,
+    videos,
   } = useHome();
+  const [filterText, setFilterText] = useState("all");
+  const [filteredVideos, setFilteredVideos] = useState([]);
 
-  console.log("home page -> ", isVideoSidebarOpen);
+  const handleFilterText = (e: any, cat: any) => {
+    e.preventDefault();
+    setFilterText(cat);
+    console.log("filter id => ", cat);
+  };
+
+  useEffect(() => {
+    if (videos) {
+      if (filterText === "all") {
+        setFilteredVideos(videos);
+      }
+
+      if (filterText && filterText !== "all") {
+        setFilteredVideos(
+          videos.filter((item: any) => item.category === filterText)
+        );
+      }
+    }
+  }, [filterText, videos]);
+
+  console.log("filtered videos -> ", filteredVideos, videos);
 
   return (
     <div className="video_gall_wrap">
@@ -34,39 +57,45 @@ const Home = () => {
               <div className="video_gall_right_top_nav">
                 <ul className="video_gall_right_top_ul">
                   <li>
-                    <a className="active" href="#">
+                    <a
+                      className={`${filterText === "all" ? "active" : ""}`}
+                      onClick={(e) => {
+                        handleFilterText(e, "all");
+                      }}
+                      href="#"
+                    >
                       All
                     </a>
                   </li>
-                  <li>
-                    <a href="#">Latest</a>
-                  </li>
-                  <li>
-                    <a href="#">Old</a>
-                  </li>
-                  <li>
-                    <a href="#">Colorful</a>
-                  </li>
-                  <li>
-                    <a href="#">Nautral</a>
-                  </li>
-                  <li>
-                    <a href="#">Top most</a>
-                  </li>
+                  {videos?.length > 0 &&
+                    videos?.map((item: any) => (
+                      <li key={item.id}>
+                        <a
+                          className={`${
+                            filterText === item.category ? "active" : ""
+                          }`}
+                          onClick={(e) => {
+                            handleFilterText(e, item.category);
+                          }}
+                          href="#"
+                        >
+                          {item.category}
+                        </a>
+                      </li>
+                    ))}
                 </ul>
               </div>
               <hr className="hr_line video_gall_hr_line" />
             </div>
             <div className="video_gall_main">
               <div className="row">
-                <VideoSingleCard />
-                <VideoSingleCard />
-                <VideoSingleCard />
-                <VideoSingleCard />
-                <VideoSingleCard />
-                <VideoSingleCard />
-                <VideoSingleCard />
-                <VideoSingleCard />
+                {videos?.length > 0 && filteredVideos ? (
+                  filteredVideos?.map((video: any) => (
+                    <VideoSingleCard key={video.id} video={video} />
+                  ))
+                ) : (
+                  <h3>Loading...</h3>
+                )}
               </div>
               <div className="text-center _pad_t20 border-pill">
                 <button type="button" className="_btn1 rounded-pill">
