@@ -348,8 +348,8 @@
 
 .video_gall_dtl_wrap {
   margin-top: 40px;
-  margin-left: 76px;
-  margin-right: 76px;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .video_gall_dtl_vdo_frame {
@@ -405,6 +405,17 @@
   font-size: 15px;
   line-height: 1.3;
   margin-bottom: 8px;
+}
+
+@media (max-width: 767.99px) {
+  .video_gall_dtl_vdo_title h3 {
+    font-size: 18px;
+  }
+
+  .video_gall_dtl_rltd_item_content h6 {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
 }
 
 .video_gall_dtl_rltd_item_duration {

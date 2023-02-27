@@ -81,7 +81,7 @@ const VideoView = () => {
                             this...
                           </h6>
                           <small>Kamal ALom</small>
-                          <p className="_mar_t2">
+                          <p className="">
                             <small>300k Views - 2 hours ago</small>
                           </p>
                         </div>
@@ -111,7 +111,7 @@ const VideoView = () => {
                             How to make a online video in just within this...
                           </h6>
                           <small>Jamal ALom</small>
-                          <p className="_mar_t2">
+                          <p className="">
                             <small>30k Views - 1 hours ago</small>
                           </p>
                         </div>
@@ -142,7 +142,7 @@ const VideoView = () => {
                             this...
                           </h6>
                           <small>Karim Hossian</small>
-                          <p className="_mar_t2">
+                          <p className="">
                             <small>1M Views - 1 hours ago</small>
                           </p>
                         </div>
@@ -170,7 +170,7 @@ const VideoView = () => {
                             this...
                           </h6>
                           <small>Karim Hossian</small>
-                          <p className="_mar_t2">
+                          <p className="">
                             <small>1M Views - 1 hours ago</small>
                           </p>
                         </div>
