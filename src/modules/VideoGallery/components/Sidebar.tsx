@@ -9,23 +9,23 @@ const Sidebar = ({ isVideoSidebarOpen, toggleVideoSidebar }: any) => {
         <div className="video_gall_sidebar_wrapper">
           <div className="video_gall_sidebar">
             <div className="video_gall_sidebar_title">
-              <h3>All Category</h3>
+              <h3>All Gallery</h3>
             </div>
             <ul className="video_gall_sidebar_ul">
               <li>
                 <a onClick={toggleVideoSidebar} href="#">
-                  Gellary 1
+                  Gallery 1
                 </a>
               </li>
               <li>
                 <a onClick={toggleVideoSidebar} className="active" href="#">
-                  Gellary 2
+                  Gallery 2
                 </a>
               </li>
               <li>
                 <a onClick={toggleVideoSidebar} href="#">
                   <div>
-                    <span>Gellary 3</span>
+                    <span>Gallery 3</span>
                     <sup title="Primium" className="video_gall_sidebar_tag">
                       <img src="./pro_logo_hat.png" alt="" />
                     </sup>
@@ -34,12 +34,12 @@ const Sidebar = ({ isVideoSidebarOpen, toggleVideoSidebar }: any) => {
               </li>
               <li>
                 <a onClick={toggleVideoSidebar} href="#">
-                  Gellary 4
+                  Gallery 4
                 </a>
               </li>
               <li>
                 <a onClick={toggleVideoSidebar} href="#">
-                  Gellary 5
+                  Gallery 5
                 </a>
               </li>
               <li>
