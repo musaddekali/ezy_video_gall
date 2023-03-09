@@ -10,11 +10,33 @@ const VideoView = () => {
               <div className="video_gall_dtl_content">
                 <div className="video_gall_dtl_vdo">
                   <div className="video_gall_dtl_vdo_frame position-relative">
-                    {/* more video link  */}
-                    {/* https://iframe.mediadelivery.net/embed/29280/3ce41a1f-5ebc-4b76-ae11-3e231b7bdf72?autoplay=true" loading="lazy"  */}
-                    {/* https://iframe.mediadelivery.net/embed/29280/6fba3bc0-a1ec-4310-adb6-9220c281f524?autoplay=true" loading="lazy" */}
-                    {/* https://iframe.mediadelivery.net/embed/29280/99042764-6ca1-4fed-a7e2-af38e1a5c6d5?autoplay=true" loading="lazy" */}
                     <div style={{ position: "relative", paddingTop: "56.25%" }}>
+                      {/* Video pro overlay */}
+                      <div className="video_gall_dtl_pro_overlay">
+                        <div className="video_gall_dtl_pro_overlay_content text-center">
+                          <div className="video_gall_dtl_pro_lock_icon">
+                            <svg
+                              stroke="currentColor"
+                              fill="currentColor"
+                              strokeWidth={0}
+                              viewBox="0 0 1024 1024"
+                              height="1em"
+                              width="1em"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path d="M832 464h-68V240c0-70.7-57.3-128-128-128H388c-70.7 0-128 57.3-128 128v224h-68c-17.7 0-32 14.3-32 32v384c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V496c0-17.7-14.3-32-32-32zM540 701v53c0 4.4-3.6 8-8 8h-40c-4.4 0-8-3.6-8-8v-53a48.01 48.01 0 1 1 56 0zm152-237H332V240c0-30.9 25.1-56 56-56h248c30.9 0 56 25.1 56 56v224z" />
+                            </svg>
+                          </div>
+                          <h2 className="text-white mx-auto">
+                            You need to purchase the video library{" "}
+                            {"library name"} in order to watch this video.
+                          </h2>
+                          <a href="#" className="_btn1">
+                            Buy a plan
+                          </a>
+                        </div>
+                      </div>
+                      {/* End Video pro overlay */}
                       <iframe
                         src="https://iframe.mediadelivery.net/embed/29280/40c4c336-6273-4354-a3d9-c7b3a7a1c045?autoplay=true"
                         loading="lazy"
